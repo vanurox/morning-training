@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu in html</title>
+	<style type="text/css">
+		ul{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			/*float:right;*/
+		}
+		ul li {
+			width:150px;
+			padding:10px 0px;
+			background:#000;
+			color:#fff;
+			text-align: center;
+			float:left;
+			transition:all 0.25s ease-out 0s;
+		}
+		ul li:hover {
+			background:#fff;
+			color:#000;
+			padding-top:15px;
+			cursor: pointer;
+		}
+		ul li ul{
+			display: none;
+		}
+		ul li:hover > ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Home</li>
+		<li>About
+			<ul>
+				<li>Members</li>
+				<li>Community</li>
+			</ul>
+		</li>
+		<li>Contact</li>
+		<li>Gallery
+			<ul>
+				<li>Photos</li>
+				<li>Videos</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

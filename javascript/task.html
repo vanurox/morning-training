@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task in javascript</title>
+	<link rel="stylesheet" type="text/css" href="task.css">
+</head>
+<body>
+	<input type="text" id="username"> <br>
+	<input type="text" id="email"> <br>
+	<button onclick="saveUser()">Save User</button>
+
+
+	<div class="container" id="fill">
+		
+	</div>
+	<script type="text/javascript">
+		users = [];
+		// var username = document.getElementById("username");
+		// var email = document.getElementById("email");
+		// var fill = document.getElementById("fill");
+
+		function saveUser(){
+			// console.log(username.value);
+			var user = {
+				username : username.value,
+				email : email.value
+			};
+			users.push(user);
+			displayOutput();
+			clearAll();
+		}			
+
+		function clearAll(){
+			username.value = "";
+			email.value = "";
+			username.focus();
+		}
+
+		function displayOutput(){
+			var elem = '';
+			users.forEach(
+				function(v,i){
+					elem += '<div class="row">';
+					elem +=	'<div>' + v.username + '</div>';
+					elem +=	'<div>' + v.email + '</div>';
+					elem +=	'</div>';
+				}
+			);
+
+			fill.innerHTML = elem;
+		}
+	</script>
+</body>
+</html>

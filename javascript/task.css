@@ -1,0 +1,14 @@
+.container{
+	width:50%;
+	height:auto;
+	padding:15px;
+}
+.row{
+	width:100%;
+	background:#ccc;
+	padding:5px 0px;
+	display: flex;
+	flex-direction:row;
+	justify-content: space-around;
+	margin-top:2px;
+}

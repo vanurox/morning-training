@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Validation in javascript</title>
+	<script type="text/javascript">
+		function validateMe(box){
+			
+			if(box.value == "")
+			{
+				box.nextSibling.innerHTML = box.id + " Empty";
+			}else{
+				box.nextSibling.innerHTML = box.id + " Valid";
+			}
+		}
+	</script>
+	<style type="text/css">
+		.validation {
+			color:#f00;
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="username" onkeyup="validateMe(this)"><span class="validation"></span><br>
+	<input type="text" id="email" onkeyup="validateMe(this)"><span class="validation"></span><br>
+</body>
+</html>

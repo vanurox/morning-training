@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Food Court software in javascript</title>
+    <link rel="stylesheet" href="foodcourt.css">
+</head>
+<body>
+    <div class="alert" id="alert"></div>
+    <div class="container">
+        <div class="row top-bar">
+            <div class="box">
+                <select id="items">
+                    <option value="0">Select Item</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="sandwich">Sandwich</option>
+                </select>
+            </div>
+            <div class="box">
+                <input type="text" id="qty" onkeydown="if(event.keyCode == 13) addItem()">
+            </div>
+            <div class="box">
+                <button onclick="addItem()">Add Item</button>
+            </div>
+            <div class="box">
+                 <div id="grandTotal">0</div>
+            </div>
+        </div>
+        <!-- top-bar endzz here  -->
+        <div class="order-table">
+            <div class="row">
+                <div class="box">Item</div>
+                <div class="box">Quantity</div>
+                <div class="box">Price</div>
+                <div class="box">Row Total</div>
+                <div class="box">Delete</div>
+            </div>
+        </div>
+        <div class="order-table" id="fillDetails">
+            
+<!--             
+            <div class="row">
+                <div class="box">Pizza</div>
+                <div class="box">1</div>
+                <div class="box">100</div>
+                <div class="box">100</div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="foodcourt.js"></script>
+</body>
+</html>   

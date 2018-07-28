@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Function in javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dot{
+            width:20px;
+            height:20px;
+            background:#f80;
+            border-radius:50%;
+            border:2px dashed #444;
+            position: absolute;
+            animation:rotateBox 1s ease-out infinite;
+        }
+        @keyframes rotateBox{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);                
+            }
+        }
+        #container {
+            height:300px;
+            width:100%;
+            position: absolute;
+            top:0;
+            left:0;
+            background:#abc;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <!-- <div class="dot" style='top:20px;left:30px;'></div> -->
+    <script>
+        container.addEventListener('mousemove',function(e){
+            // console.log(e);
+            var top = e.clientY;
+            var left = e.clientX;
+            var div = "<div class='dot' style='top:"+ top + "px;left:"+ left+"px'></div>";
+            // document.body.innerHTML += div;
+            container.innerHTML += div;
+        });
+    </script>
+</body>
+</html>

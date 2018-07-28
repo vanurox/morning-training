@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input value from javascript</title>
+</head>
+<body>
+	<input type="text" id="username"> <br>
+	<button onclick="validateUser()">Check Username</button>
+	
+	<script type="text/javascript">
+		function validateUser(){
+			var username = document.getElementById("username").value;
+			if(username == "")
+			{
+				console.log("user is empty");
+			}else{
+				console.log("User is fine");
+			}
+		}
+	</script>
+</body>
+</html>
